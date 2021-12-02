@@ -1,21 +1,23 @@
 import { Link } from 'react-router-dom';
+// this styles are available only for this component => it's scoped
+import headerElementStyle from './MainNavigation.module.css'
 function MainNavigation() {
-    return <header>
-        <div>
+    return <header className={headerElementStyle.header}>
+        <div className={headerElementStyle.logo}>
             React Meetups
         </div>
         <nav>
-            <ul>
+            <ul className={headerElementStyle.list}>
                 <li>
                     {/* a click listener will be attached to this anchor tag and when we click, it will prevent the default request made by the browser and it will parse the url browser   */}
                     {/* we set the path where this link should lead */}
-                    <Link to='/'> All Meetups</Link>
+                    <Link to='/' className={headerElementStyle.item}> All Meetups</Link>
                 </li>
                 <li>
-                    <Link to='/new-meetup'> Add New Meetup</Link>
+                    <Link to='/new-meetup' className={headerElementStyle.item}> Add New Meetup</Link>
                 </li>
                 <li>
-                    <Link to='/favorites'> My Favorites</Link>
+                    <Link to='/favorites' className={headerElementStyle.item}> My Favorites</Link>
                 </li>
             </ul>
         </nav>

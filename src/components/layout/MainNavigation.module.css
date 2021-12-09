@@ -9,19 +9,28 @@
 }
 .header .logo {
   color: #fff;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 700;
 }
 .header ul {
   list-style-type: none;
   display: flex;
-  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  align-items: flex-baseline;
 }
-.header ul li {
-  margin-left: 1.5em;
+.header li {
+  margin-left: 3em;
 }
-.header .item {
-  color: #fff;
+.header a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.badge {
+  background-color: #cc2062;
+  color: #fff;
+  border-radius: 12px;
+  padding: 0 1rem;
+  margin-left: 0.5rem;
 }

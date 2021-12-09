@@ -1,7 +1,5 @@
 .item {
   margin: 1rem 0;
-  display: flex;
-  justify-content: center;
 }
 .image {
   width: 100%;
@@ -20,14 +18,23 @@
 }
 .content h3 {
   font-size: 1.25rem;
+  color: #2c292b;
 }
-.actions{
-    padding: 3rem;
-    margin-left: 6rem;
+.actions {
+  padding: 1.5rem;
+  text-align: center;
 }
-.actions .btn{
-    font-size: 15px;
-    padding: 0.5rem;
-    color: #3266a8;
-    border: 2px solid #ddd;
+.actions .btn {
+  font: inherit;
+  cursor: pointer;
+  color: #3266a8;
+  border: 1px solid #3266a8;
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+.actions .btn:hover,
+.actions .btn:active {
+  background-color: #829cd9;
+  color: #fff;
 }

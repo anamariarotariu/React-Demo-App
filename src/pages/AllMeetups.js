@@ -4,7 +4,7 @@ const dummyData =
         {
             id: 'meeting1',
             title: 'First meetup for the day',
-            image: 'https://unsplash.com/photos/FV3GConVSss',
+            image: require('../imgs/meetup_place.jpg'),
             address: 'Meetupstreet 5, 12345 Meetup City',
             description: 'This is a first, amazing meetup which you definitely should not miss'
         },

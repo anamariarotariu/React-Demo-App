@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import Card from "../ui/Card";
 import styles from "./NewMeetupForm.module.css";
-function NewMeetupForm() {
+function NewMeetupForm(props) {
     // this will allow us to access the user input for title through this ref
     const titleInputRef = useRef();
     const imageInputRef = useRef();
@@ -23,7 +23,7 @@ function NewMeetupForm() {
             description: enteredDescription
         };
         // we want to send the info to a server
-        console.log(meetupData);
+        props.onAddMeetup(meetupData);
 
     }
     return <Card>

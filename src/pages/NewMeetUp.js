@@ -4,7 +4,7 @@ function NewMeetUpPage() {
     const navigate = useNavigate();
     function addMeetupHandler(meetupData) {
         // we send a HTTP request, fetch sends a GET request by default and by adding a second argument we send a POST request
-        // we add .json because of the firebase and this meetups will be a table 
+        // we add .json because of firebase and this meetups will be a table 
         fetch('https://react-meetings-project-default-rtdb.firebaseio.com/meetups.json', {
             method: 'POST',
             body: JSON.stringify(meetupData),

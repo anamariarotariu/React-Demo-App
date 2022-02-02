@@ -3,7 +3,7 @@ import { useRef } from "react";
 import Card from "../ui/Card";
 import styles from "./NewMeetupForm.module.css";
 function NewMeetupForm(props) {
-    // this will allow us to access the user input for title through this ref
+    // this will allow us to access the user input through this ref
     const titleInputRef = useRef();
     const imageInputRef = useRef();
     const addressInputRef = useRef();
@@ -12,12 +12,12 @@ function NewMeetupForm(props) {
     function submitHandler(event) {
         event.preventDefault();
         // extract what the user entered and store it in an object
-        const enteredTtile = titleInputRef.current.value;
+        const enteredTitle = titleInputRef.current.value;
         const enteredImage = imageInputRef.current.value;
         const enteredAddress = addressInputRef.current.value;
         const enteredDescription = descriptionInputRef.current.value;
         const meetupData = {
-            title: enteredTtile,
+            title: enteredTitle,
             image: enteredImage,
             address: enteredAddress,
             description: enteredDescription

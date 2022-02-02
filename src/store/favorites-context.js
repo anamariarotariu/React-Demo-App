@@ -9,13 +9,13 @@ const FavoritesContext = createContext({
 export function FavoritesContextProvider(props) {
     const [userFavorites, setUserFavorites] = useState([]);
     function addFavoriteHandler(favoriteMeetup) {
-        //guaranteed to get latest state snapshot,because React doesn't modify the state instantly
+        //guaranteed to get latest state snapshot, because React doesn't modify the state instantly
         setUserFavorites((prevUserFavorites) => {
             return prevUserFavorites.concat(favoriteMeetup);
         });
     }
     function removeFavoriteHandler(meetupId) {
-        setUserFavorites(prevUserFavorites => {
+        setUserFavorites((prevUserFavorites) => {
             return prevUserFavorites.filter(meetup => meetup.id !== meetupId)
         })
     }
@@ -28,6 +28,7 @@ export function FavoritesContextProvider(props) {
     const context = {
         favorites: userFavorites,
         totalFavorites: userFavorites.length,
+        //we will have a pointer to each function
         addFavorite: addFavoriteHandler,
         removeFavorite: removeFavoriteHandler,
         itemIsFavorite: itemIsFavoriteHandler

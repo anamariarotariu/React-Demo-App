@@ -9,7 +9,8 @@ function NewMeetUpPage() {
             method: 'POST',
             body: JSON.stringify(meetupData),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
             }
         }).then(() => {
             // once the request is done, we navigate back to the home page
